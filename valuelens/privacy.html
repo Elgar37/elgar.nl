@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<title>ValueLens Scan privacy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --navy:#102A43; --blue:#0B6E99; --mint:#21C58E; --mint-ink:#0E8A61;
+  --bg:#F4F7F9; --surface:#FFFFFF; --ink:#0F1B26; --muted:#5A6B7A; --line:#DDE5EB; --chip:#E8F7F1;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1620; --surface:#122232; --ink:#E7EEF3; --muted:#9AB0C0; --line:#20364A; --chip:#123A30; --mint-ink:#4FE0AE; --blue:#5AB6E6;}}
+:root[data-theme="dark"]{--bg:#0B1620; --surface:#122232; --ink:#E7EEF3; --muted:#9AB0C0; --line:#20364A; --chip:#123A30; --mint-ink:#4FE0AE; --blue:#5AB6E6;}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--mint);outline-offset:2px;border-radius:6px}
+header.top{background:linear-gradient(135deg,#16456B,#0A1C2E);color:#fff;padding-block:40px 44px;padding-inline:16px}
+.inner{max-width:760px;margin:0 auto}
+header.top .inner{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+header.top img{width:72px;height:72px;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5DF0C0}
+header.top h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,5vw,42px);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+main{padding-inline:16px;padding-block:36px 64px}
+main .inner>section{margin-bottom:34px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(21px,3vw,26px);margin:0 0 10px;text-wrap:balance}
+h3{font-size:17px;font-weight:700;margin:20px 0 4px}
+p,li{max-width:66ch}
+ul{padding-left:20px}
+li{margin-bottom:6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.rows{display:grid;gap:2px}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.kv:first-child{border-top:0}
+.kv b{font-weight:600;color:var(--muted)}
+.mail{display:inline-block;margin-top:6px;background:var(--mint);color:#06231A;font-weight:700;padding:10px 18px;border-radius:999px;text-decoration:none}
+nav.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+nav.links a{background:rgba(255,255,255,.12);color:#fff;text-decoration:none;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:600}
+footer{border-top:1px solid var(--line);padding-block:22px 48px;padding-inline:16px;color:var(--muted);font-size:14px}
+footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+.updated{color:var(--muted);font-size:14px;margin-top:-6px}
+@media (max-width:520px){header.top .inner{grid-template-columns:1fr}.kv{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="inner">
+<img src="icon.png" alt="App-icoon ValueLens Scan">
+<div><div class="eyebrow">Privacyverklaring</div><h1>Privacy in ValueLens Scan</h1>
+<nav class="links"><a href="index.html">Support</a><a href="voorwaarden.html">Voorwaarden</a></nav></div>
+</div></header>
+<main><div class="inner">
+
+<p class="updated">Laatst bijgewerkt: 20 september 2026</p>
+
+<section>
+<h2>Kort samengevat</h2>
+<ul>
+<li>Je hebt geen account nodig. De app werkt met een anonieme sleutel per toestel.</li>
+<li>Alleen de uitsnede van het voorwerp gaat naar onze server, voor herkenning. Die wordt binnen 24 uur verwijderd.</li>
+<li>Wij verkopen je gegevens niet, tonen geen advertenties en volgen je niet over andere apps of websites heen.</li>
+<li>Je kunt al je gegevens in de app downloaden of verwijderen.</li>
+</ul>
+</section>
+
+<section>
+<h2>Wie is verantwoordelijk?</h2>
+<p>Velda B.V., Auke Vleerstraat 155, 7547 PH Enschede (KvK 06061323) is de verwerkingsverantwoordelijke voor de gegevens die via ValueLens Scan worden verwerkt. Vragen over privacy: <a href="mailto:elgar37@gmail.com">elgar37@gmail.com</a>.</p>
+</section>
+
+<section>
+<h2>Welke gegevens verwerken we?</h2>
+<h3>Foto's van voorwerpen</h3>
+<p>Voor herkenning sturen we een uitsnede van je foto naar onze server in Amsterdam en van daaruit naar de AI-dienst die het voorwerp herkent. De uitsnede wordt binnen 24 uur van onze server verwijderd, tenzij je het voorwerp in je collectie bewaart. Gezichten worden standaard vervaagd voordat een foto wordt gebruikt in een advertentie; die instelling staat onder Profiel.</p>
+<h3>Anonieme toestelsleutel</h3>
+<p>Bij het eerste gebruik maakt de app een willekeurige sleutel aan om je scans en je abonnement bij te houden. Die sleutel is niet aan je naam, e-mailadres of Apple ID gekoppeld.</p>
+<h3>Scans, waarderingen en advertentieteksten</h3>
+<p>Merk, model, staat en de berekende prijzen bewaren we bij je toestelsleutel, zodat je ze in de app kunt terugvinden.</p>
+<h3>Abonnement en aankopen</h3>
+<p>We bewaren welk plan actief is en hoeveel scans je nog hebt. De betaling zelf loopt via Apple; wij zien geen betaalgegevens.</p>
+<h3>Verkoopprijzen die je zelf invult</h3>
+<p>Vul je na verkoop in wat het opleverde, dan gebruiken we dat alleen anoniem om de schattingen te verbeteren. Dit is optioneel en staat onder Profiel.</p>
+<p>De app gebruikt geen advertentie-identificatie, geen analytics van derden en geen trackingpixels.</p>
+</section>
+
+<section>
+<h2>Waarom mogen we dit verwerken?</h2>
+<ul>
+<li><b>Uitvoering van de overeenkomst:</b> herkenning, waardering, advertentieteksten en je abonnement. Zonder deze gegevens werkt de app niet.</li>
+<li><b>Toestemming:</b> het anoniem delen van verkoopprijzen. Die kun je altijd weer uitzetten.</li>
+<li><b>Gerechtvaardigd belang:</b> beveiliging en het voorkomen van misbruik van de server.</li>
+</ul>
+</section>
+
+<section>
+<h2>Wie verwerken gegevens voor ons?</h2>
+<div class="card rows">
+<div class="kv"><b>Fly.io</b><span>Hosting van de server, regio Amsterdam</span></div>
+<div class="kv"><b>Anthropic</b><span>Herkenning van het voorwerp en het schrijven van de advertentietekst. Foto's worden niet gebruikt om modellen te trainen.</span></div>
+<div class="kv"><b>eBay</b><span>Opvragen van openbare aanbiedingen voor de prijsvergelijking. We sturen alleen een zoekterm, geen foto en geen persoonsgegevens.</span></div>
+<div class="kv"><b>Apple</b><span>Levering van de app, TestFlight en de afhandeling van abonnementen</span></div>
+</div>
+<p>Met deze partijen zijn verwerkersovereenkomsten gesloten of gelden hun standaardvoorwaarden voor gegevensverwerking. Verwerking buiten de EU gebeurt op basis van de modelcontractbepalingen van de Europese Commissie.</p>
+</section>
+
+<section>
+<h2>Hoe lang bewaren we het?</h2>
+<ul>
+<li>Foto-uitsnedes: maximaal 24 uur, tenzij je het voorwerp bewaart.</li>
+<li>Scans, waarderingen en advertenties: zolang je ze in de app bewaart.</li>
+<li>Gegevens over je abonnement: zolang het abonnement loopt en daarna zeven jaar voor de belastingadministratie, voor zover wij die gegevens ontvangen.</li>
+<li>Anoniem gedeelde verkoopprijzen: onbeperkt, omdat ze niet meer naar jou te herleiden zijn.</li>
+</ul>
+</section>
+
+<section>
+<h2>Jouw rechten</h2>
+<p>Je hebt recht op inzage, correctie, verwijdering, beperking en overdraagbaarheid van je gegevens, en je kunt bezwaar maken tegen verwerking. In de app kun je dat meteen zelf doen onder <b>Profiel → Mijn gegevens</b>: daar download je alles of verwijder je alles. Liever per mail? Stuur een bericht naar <a href="mailto:elgar37@gmail.com">elgar37@gmail.com</a>. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens.</p>
+</section>
+
+<section>
+<h2>Kinderen</h2>
+<p>De app is niet gericht op kinderen onder de 13 jaar en verzamelt niet bewust gegevens van hen.</p>
+</section>
+
+<section>
+<h2>Wijzigingen</h2>
+<p>Verandert er iets wezenlijks, dan passen we deze pagina aan en vermelden we de nieuwe datum bovenaan. Bij ingrijpende wijzigingen melden we het in de app.</p>
+</section>
+
+</div></main>
+<footer><div class="inner">
+<span>Velda B.V. · Auke Vleerstraat 155, 7547 PH Enschede · KvK 06061323 · btw NL008565417B01</span>
+<span><a href="mailto:elgar37@gmail.com">elgar37@gmail.com</a> · +31 6 20614144</span>
+</div></footer>
+</body></html>

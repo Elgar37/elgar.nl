@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<title>ValueLens Scan support</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --navy:#102A43; --blue:#0B6E99; --mint:#21C58E; --mint-ink:#0E8A61;
+  --bg:#F4F7F9; --surface:#FFFFFF; --ink:#0F1B26; --muted:#5A6B7A; --line:#DDE5EB; --chip:#E8F7F1;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Figtree","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1620; --surface:#122232; --ink:#E7EEF3; --muted:#9AB0C0; --line:#20364A; --chip:#123A30; --mint-ink:#4FE0AE; --blue:#5AB6E6;}}
+:root[data-theme="dark"]{--bg:#0B1620; --surface:#122232; --ink:#E7EEF3; --muted:#9AB0C0; --line:#20364A; --chip:#123A30; --mint-ink:#4FE0AE; --blue:#5AB6E6;}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--mint);outline-offset:2px;border-radius:6px}
+header.top{background:linear-gradient(135deg,#16456B,#0A1C2E);color:#fff;padding-block:40px 44px;padding-inline:16px}
+.inner{max-width:760px;margin:0 auto}
+header.top .inner{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+header.top img{width:72px;height:72px;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5DF0C0}
+header.top h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,5vw,42px);line-height:1.05;margin:4px 0 0;text-wrap:balance}
+main{padding-inline:16px;padding-block:36px 64px}
+main .inner>section{margin-bottom:34px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(21px,3vw,26px);margin:0 0 10px;text-wrap:balance}
+h3{font-size:17px;font-weight:700;margin:20px 0 4px}
+p,li{max-width:66ch}
+ul{padding-left:20px}
+li{margin-bottom:6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.rows{display:grid;gap:2px}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.kv:first-child{border-top:0}
+.kv b{font-weight:600;color:var(--muted)}
+.mail{display:inline-block;margin-top:6px;background:var(--mint);color:#06231A;font-weight:700;padding:10px 18px;border-radius:999px;text-decoration:none}
+nav.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+nav.links a{background:rgba(255,255,255,.12);color:#fff;text-decoration:none;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:600}
+footer{border-top:1px solid var(--line);padding-block:22px 48px;padding-inline:16px;color:var(--muted);font-size:14px}
+footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+.updated{color:var(--muted);font-size:14px;margin-top:-6px}
+@media (max-width:520px){header.top .inner{grid-template-columns:1fr}.kv{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="inner">
+<img src="icon.png" alt="App-icoon ValueLens Scan">
+<div><div class="eyebrow">Support</div><h1>Hulp bij ValueLens Scan</h1>
+<nav class="links"><a href="privacy.html">Privacy</a><a href="voorwaarden.html">Voorwaarden</a></nav></div>
+</div></header>
+<main><div class="inner">
+
+<section>
+<h2>Hulp nodig?</h2>
+<p>Stuur een e-mail met je vraag, het model van je iPhone en zo mogelijk een schermafbeelding. Je krijgt normaal gesproken binnen twee werkdagen antwoord.</p>
+<a class="mail" href="mailto:elgar37@gmail.com?subject=ValueLens%20Scan%20-%20vraag">Stuur een e-mail</a>
+</section>
+
+<section>
+<h2>Contact en bedrijfsgegevens</h2>
+<div class="card rows">
+<div class="kv"><b>E-mail</b><span><a href="mailto:elgar37@gmail.com">elgar37@gmail.com</a></span></div>
+<div class="kv"><b>Telefoon</b><span><a href="tel:+31620614144">+31 6 20614144</a></span></div>
+<div class="kv"><b>Uitgever</b><span>Velda B.V.</span></div>
+<div class="kv"><b>Adres</b><span>Auke Vleerstraat 155<br>7547 PH Enschede, Nederland</span></div>
+<div class="kv"><b>KvK</b><span>06061323</span></div>
+<div class="kv"><b>Btw-nummer</b><span>NL008565417B01</span></div>
+</div>
+</section>
+
+<section>
+<h2>Wat doet ValueLens Scan?</h2>
+<p>Je maakt een foto van een voorwerp. De app herkent merk, model en uitvoering en berekent uit vergelijkbare aanbiedingen een prijsband: een prijs om snel te verkopen, een realistische prijs en een ambitieuze prijs. Daarna maak je in een paar tikken een verkoopklare advertentie met een nette foto en een eerlijke tekst.</p>
+<p>De waarde is een <b>schatting</b> op basis van vergelijkbare aanbiedingen. Het is geen taxatie en geen garantie op een verkoopprijs. De app doet geen echtheidscontrole van luxeartikelen.</p>
+</section>
+
+<section>
+<h2>Veelgestelde vragen</h2>
+<h3>De app herkent mijn voorwerp niet goed</h3>
+<p>Maak een tweede foto van het typeplaatje of de barcode, of tik op <i>Model aanpassen</i> en vul merk en model zelf in. De waardering wordt dan opnieuw berekend.</p>
+<h3>Ik krijg geen prijs te zien</h3>
+<p>Dan waren er te weinig vergelijkbare aanbiedingen voor een betrouwbare schatting. Liever geen prijs dan een verzonnen prijs. Een scherpere foto of een correcte modelnaam helpt vaak.</p>
+<h3>Waarop is de prijs gebaseerd?</h3>
+<p>Op actuele aanbiedingen van vergelijkbare voorwerpen. Uitschieters worden weggefilterd, recente aanbiedingen wegen zwaarder, en de staat die je opgeeft telt mee. Je ziet onder <i>Onderbouwing</i> met welke aanbiedingen is vergeleken.</p>
+<h3>Hoe zeg ik mijn abonnement op?</h3>
+<p>Via Instellingen op je iPhone: tik op je naam, dan op <i>Abonnementen</i>, en kies ValueLens Scan. Of in de app onder Profiel: <i>Abonnement beheren of opzeggen</i>. Opzeggen gaat in aan het einde van de lopende periode.</p>
+<h3>Hoe verwijder ik mijn gegevens?</h3>
+<p>In de app onder <b>Profiel → Mijn gegevens</b> kun je alles downloaden of definitief verwijderen. Je hebt geen account nodig om de app te gebruiken.</p>
+<h3>Werkt de app in het buitenland?</h3>
+<p>De app werkt overal, maar de prijzen zijn gericht op de Nederlandse en Europese markt en worden in euro's getoond.</p>
+</section>
+
+<section>
+<h2>Een fout melden of iets voorstellen</h2>
+<p>Ontbreekt er iets, of klopt een waardering niet? Mail het met een schermafbeelding. Meldingen over duidelijk verkeerde herkenningen zijn het nuttigst: vermeld wat het werkelijk was.</p>
+</section>
+
+</div></main>
+<footer><div class="inner">
+<span>Velda B.V. · Auke Vleerstraat 155, 7547 PH Enschede · KvK 06061323 · btw NL008565417B01</span>
+<span><a href="mailto:elgar37@gmail.com">elgar37@gmail.com</a> · +31 6 20614144</span>
+</div></footer>
+</body></html>
