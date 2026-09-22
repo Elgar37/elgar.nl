@@ -1,68 +1,79 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<title>ValueLens Scan support</title>
+<title>ValueLens Scan</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Richt je iPhone-camera op een voorwerp en zie binnen seconden wat het tweedehands waard is. Gratis app, geen account nodig.">
+<meta property="og:title" content="ValueLens Scan – zie direct wat iets waard is">
+<meta property="og:description" content="Richt je camera op een voorwerp en zie binnen seconden wat het tweedehands waard is. Gratis voor iPhone.">
+<meta property="og:image" content="https://www.elgar.nl/valuelens/icon.png">
+<meta property="og:url" content="https://www.elgar.nl/valuelens/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<!-- SMARTBANNER: na goedkeuring de commentaartekens rond de volgende regel weghalen -->
+<!-- <meta name="apple-itunes-app" content="app-id=6813640334"> -->
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
-<style>
-:root{
-  --navy:#102A43; --blue:#0B6E99; --mint:#21C58E; --mint-ink:#0E8A61;
-  --bg:#F4F7F9; --surface:#FFFFFF; --ink:#0F1B26; --muted:#5A6B7A; --line:#DDE5EB; --chip:#E8F7F1;
-  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
-  --body:"Figtree","Avenir Next","Segoe UI",system-ui,sans-serif;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0B1620; --surface:#122232; --ink:#E7EEF3; --muted:#9AB0C0; --line:#20364A; --chip:#123A30; --mint-ink:#4FE0AE; --blue:#5AB6E6;}}
-:root[data-theme="dark"]{--bg:#0B1620; --surface:#122232; --ink:#E7EEF3; --muted:#9AB0C0; --line:#20364A; --chip:#123A30; --mint-ink:#4FE0AE; --blue:#5AB6E6;}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:var(--blue)}
-a:focus-visible{outline:3px solid var(--mint);outline-offset:2px;border-radius:6px}
-header.top{background:linear-gradient(135deg,#16456B,#0A1C2E);color:#fff;padding-block:40px 44px;padding-inline:16px}
-.inner{max-width:760px;margin:0 auto}
-header.top .inner{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
-header.top img{width:72px;height:72px;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.35)}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5DF0C0}
-header.top h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,5vw,42px);line-height:1.05;margin:4px 0 0;text-wrap:balance}
-main{padding-inline:16px;padding-block:36px 64px}
-main .inner>section{margin-bottom:34px}
-h2{font-family:var(--display);font-weight:800;font-size:clamp(21px,3vw,26px);margin:0 0 10px;text-wrap:balance}
-h3{font-size:17px;font-weight:700;margin:20px 0 4px}
-p,li{max-width:66ch}
-ul{padding-left:20px}
-li{margin-bottom:6px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
-.rows{display:grid;gap:2px}
-.kv{display:grid;grid-template-columns:170px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
-.kv:first-child{border-top:0}
-.kv b{font-weight:600;color:var(--muted)}
-.mail{display:inline-block;margin-top:6px;background:var(--mint);color:#06231A;font-weight:700;padding:10px 18px;border-radius:999px;text-decoration:none}
-nav.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-nav.links a{background:rgba(255,255,255,.12);color:#fff;text-decoration:none;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:600}
-footer{border-top:1px solid var(--line);padding-block:22px 48px;padding-inline:16px;color:var(--muted);font-size:14px}
-footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
-.updated{color:var(--muted);font-size:14px;margin-top:-6px}
-@media (max-width:520px){header.top .inner{grid-template-columns:1fr}.kv{grid-template-columns:1fr;gap:0}}
-</style>
+<style>:root{--navy:#102A43;--blue:#0B6E99;--mint:#21C58E;--mint-ink:#0E8A61;--bg:#F4F7F9;--surface:#FFFFFF;--ink:#0F1B26;--muted:#5A6B7A;--line:#DDE5EB;--chip:#E8F7F1;--display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;--body:"Figtree","Avenir Next","Segoe UI",system-ui,sans-serif;}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1620;--surface:#122232;--ink:#E7EEF3;--muted:#9AB0C0;--line:#20364A;--chip:#123A30;--mint-ink:#4FE0AE;--blue:#5AB6E6;}}:root[data-theme="dark"]{--bg:#0B1620;--surface:#122232;--ink:#E7EEF3;--muted:#9AB0C0;--line:#20364A;--chip:#123A30;--mint-ink:#4FE0AE;--blue:#5AB6E6;}*{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}a{color:var(--blue)}a:focus-visible{outline:3px solid var(--mint);outline-offset:2px;border-radius:6px}header.top{background:linear-gradient(135deg,#16456B,#0A1C2E);color:#fff;padding-block:40px 44px;padding-inline:16px}.inner{max-width:760px;margin:0 auto}header.top .inner{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}header.top img{width:72px;height:72px;border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.35)}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5DF0C0}header.top h1{font-family:var(--display);font-weight:800;font-size:clamp(28px,5vw,42px);line-height:1.05;margin:4px 0 0;text-wrap:balance}main{padding-inline:16px;padding-block:36px 64px}main .inner>section{margin-bottom:34px}h2{font-family:var(--display);font-weight:800;font-size:clamp(21px,3vw,26px);margin:0 0 10px;text-wrap:balance}h3{font-size:17px;font-weight:700;margin:20px 0 4px}p,li{max-width:66ch}ul{padding-left:20px}li{margin-bottom:6px}.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}.rows{display:grid;gap:2px}.kv{display:grid;grid-template-columns:170px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}.kv:first-child{border-top:0}.kv b{font-weight:600;color:var(--muted)}.mail{display:inline-block;margin-top:6px;background:var(--mint);color:#06231A;font-weight:700;padding:10px 18px;border-radius:999px;text-decoration:none}nav.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}nav.links a{background:rgba(255,255,255,.12);color:#fff;text-decoration:none;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:600}footer{border-top:1px solid var(--line);padding-block:22px 48px;padding-inline:16px;color:var(--muted);font-size:14px}footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}.updated{color:var(--muted);font-size:14px;margin-top:-6px}@media (max-width:520px){header.top .inner{grid-template-columns:1fr}.kv{grid-template-columns:1fr;gap:0}}.hero{background:linear-gradient(160deg,#16456B 0%,#0A1C2E 70%);color:#fff;padding-block:28px 0;padding-inline:16px;overflow:hidden}.hero .inner{max-width:980px}.brand{display:flex;align-items:center;gap:12px;font-weight:700}.brand img{width:44px;height:44px;border-radius:11px;box-shadow:0 6px 16px rgba(0,0,0,.35)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:end;margin-top:28px}.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,58px);line-height:1.02;margin:0;text-wrap:balance}.hero h1 em{font-style:normal;color:#5DF0C0}.hero p.lead{font-size:clamp(17px,2.2vw,20px);color:rgba(255,255,255,.82);margin:16px 0 24px;max-width:34ch}.dl{display:inline-flex;align-items:center;gap:12px;background:#fff;color:#0A1C2E;text-decoration:none;font-weight:700;font-size:18px;padding:14px 24px;border-radius:16px;box-shadow:0 10px 26px rgba(0,0,0,.3)}.dl svg{width:26px;height:26px}.dl small{display:block;font-size:12px;font-weight:600;color:#5A6B7A;line-height:1.1}.dl span{line-height:1.15}.dl[aria-disabled="true"]{background:rgba(255,255,255,.14);color:#fff;box-shadow:none;cursor:default}.dl[aria-disabled="true"] small{color:#5DF0C0}.ticks{list-style:none;padding:0;margin:22px 0 32px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px;color:rgba(255,255,255,.8)}.ticks li{margin:0}.ticks li::before{content:"\2713";color:#5DF0C0;font-weight:800;margin-right:6px}.shots{display:flex;gap:14px;justify-content:center;align-items:flex-end}.shots img{width:32%;max-width:190px;border-radius:22px 22px 0 0;box-shadow:0 -6px 30px rgba(0,0,0,.35);display:block}.shots img:nth-child(2){max-width:220px;width:38%}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}.step{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}.step b{display:block;font-family:var(--display);font-size:19px;margin-bottom:4px}.num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--chip);color:var(--mint-ink);font-weight:800;font-size:14px;margin-bottom:8px}.cta2{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 18px}.cta2 .dl{background:var(--navy);color:#fff}.cta2 .dl small{color:#9AB0C0}.cta2 .dl[aria-disabled="true"]{background:var(--chip);color:var(--ink)}.cta2 .dl[aria-disabled="true"] small{color:var(--mint-ink)}main .inner{max-width:980px}.phone-wrap{position:relative;display:flex;justify-content:center;padding-top:10px}.phone{width:270px;background:#05101A;border-radius:40px 40px 0 0;padding:12px 12px 0;box-shadow:0 -10px 40px rgba(0,0,0,.45),inset 0 0 0 2px #22384C}.notch{width:90px;height:22px;background:#000;border-radius:14px;margin:4px auto 10px}.scr{background:#0B1620;border-radius:28px 28px 0 0;padding:14px 14px 18px;color:#E7EEF3;font-size:13px;line-height:1.3}.scr-top{text-align:center;font-weight:700;font-size:13px;color:#9AB0C0;margin-bottom:12px}.item{display:flex;gap:10px;align-items:center;margin-bottom:12px}.item b{display:block;font-size:15px}.item span{color:#9AB0C0;font-size:12px}.thumb{width:52px;height:52px;border-radius:12px;background:#122232;display:grid;place-items:center}.thumb svg{width:40px}.price-card{background:#122232;border:1px solid #20364A;border-radius:18px;padding:12px 12px 6px}.plabel{text-align:center;color:#9AB0C0;font-size:12px}.pbig{text-align:center;font-family:var(--display);font-weight:800;font-size:34px;color:#5DF0C0;line-height:1.1}.bar{height:6px;border-radius:3px;background:linear-gradient(90deg,#20364A,#5DF0C0,#20364A);margin:8px 4px 10px;position:relative}.bar i{position:absolute;left:52%;top:-4px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid #5DF0C0}.prow{display:flex;justify-content:space-between;padding:7px 2px;border-top:1px solid #20364A;font-size:13px}.prow b{font-size:14px}.prow.hl b{color:#5DF0C0}.conf{margin:10px 2px;color:#5DF0C0;font-size:11.5px}.sell{background:#21C58E;color:#06231A;text-align:center;font-weight:800;border-radius:12px;padding:10px;font-size:14px}.bubble{position:absolute;background:#fff;color:#0A1C2E;font-weight:700;font-size:13px;padding:8px 12px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.3);white-space:nowrap}.bubble.b1{left:4%;top:8%}.bubble.b2{right:2%;top:84%}@media (max-width:760px){.bubble{display:none}}@media (max-width:760px){.hero-grid{grid-template-columns:1fr;gap:8px}.steps{grid-template-columns:1fr}}</style>
 </head>
 <body>
-<header class="top"><div class="inner">
-<img src="icon.png" alt="App-icoon ValueLens Scan">
-<div><div class="eyebrow">Support</div><h1>Hulp bij ValueLens Scan</h1>
-<nav class="links"><a href="privacy.html">Privacy</a><a href="voorwaarden.html">Voorwaarden</a></nav></div>
+<header class="hero"><div class="inner">
+<div class="brand"><img src="icon.png" alt="">ValueLens Scan</div>
+<div class="hero-grid">
+<div>
+<h1>Wat is het <em>waard?</em> Scan het.</h1>
+<p class="lead">Richt je iPhone-camera op een voorwerp en zie binnen een paar seconden wat het tweedehands oplevert.</p>
+<a class="dl" data-dl href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.52zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg><span><small>Downloaden in de</small>App Store</span></a>
+<ul class="ticks"><li>Gratis</li><li>Geen account nodig</li><li>Geen advertenties</li></ul>
+</div>
+<div class="phone-wrap" aria-label="Voorbeeld van een scanresultaat in de app" role="img">
+<div class="phone">
+<div class="notch"></div>
+<div class="scr">
+<div class="scr-top">Geschatte waarde</div>
+<div class="item"><div class="thumb"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M14 8h36c7 0 12 6 12 14 0 9-4 16-10 16-4 0-6-4-9-8H21c-3 4-5 8-9 8C6 38 2 31 2 22 2 14 7 8 14 8z" fill="#E7EEF3"/><circle cx="19" cy="20" r="4" fill="#9AB0C0"/><circle cx="45" cy="17" r="2.2" fill="#9AB0C0"/><circle cx="50" cy="22" r="2.2" fill="#9AB0C0"/><circle cx="40" cy="22" r="2.2" fill="#9AB0C0"/><circle cx="45" cy="27" r="2.2" fill="#9AB0C0"/></svg></div>
+<div><b>Sony DualSense</b><span>Standard White · Gebruikt</span></div></div>
+<div class="price-card">
+<div class="plabel">Realistische marktprijs</div>
+<div class="pbig">€ 90</div>
+<div class="bar"><i></i></div>
+<div class="prow"><span>Snel verkopen</span><b>€ 40</b></div>
+<div class="prow hl"><span>Realistisch</span><b>€ 90</b></div>
+<div class="prow"><span>Ambitieus</span><b>€ 110</b></div>
+</div>
+<div class="conf">&#9679; Redelijke betrouwbaarheid</div>
+<div class="sell">Verkoop in één tik</div>
+</div>
+</div>
+<div class="bubble b1">Merk en model herkend</div>
+<div class="bubble b2">Echte aanbiedingen</div>
+</div>
+</div>
 </div></header>
 <main><div class="inner">
-
+<section>
+<h2>Zo werkt het</h2>
+<div class="steps">
+<div class="step"><span class="num">1</span><b>Scan</b>Richt je camera op het voorwerp. De app herkent merk en model.</div>
+<div class="step"><span class="num">2</span><b>Zie de waarde</b>Een eerlijke prijsband op basis van echte aanbiedingen: snel verkopen, realistisch en ambitieus.</div>
+<div class="step"><span class="num">3</span><b>Verkoop</b>Maak in één tik een advertentie met een nette foto en tekst.</div>
+</div>
+</section>
+<section class="cta2">
+<h2>Probeer het zelf</h2>
+<p style="margin:0 auto 16px">Gratis voor iPhone, met elke maand gratis scans.</p>
+<a class="dl" data-dl href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.41 1.2-2.47-.03-.01-2.3-.88-2.32-3.52zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg><span><small>Downloaden in de</small>App Store</span></a>
+</section>
+<div id="support"></div>
 <section>
 <h2>Hulp nodig?</h2>
 <p>Stuur een e-mail met je vraag, het model van je iPhone en zo mogelijk een schermafbeelding. Je krijgt normaal gesproken binnen twee werkdagen antwoord.</p>
 <a class="mail" href="mailto:elgar37@gmail.com?subject=ValueLens%20Scan%20-%20vraag">Stuur een e-mail</a>
 </section>
-
 <section>
 <h2>Contact en bedrijfsgegevens</h2>
 <div class="card rows">
@@ -74,13 +85,11 @@ footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between
 <div class="kv"><b>Btw-nummer</b><span>NL008565417B01</span></div>
 </div>
 </section>
-
 <section>
 <h2>Wat doet ValueLens Scan?</h2>
 <p>Je maakt een foto van een voorwerp. De app herkent merk, model en uitvoering en berekent uit vergelijkbare aanbiedingen een prijsband: een prijs om snel te verkopen, een realistische prijs en een ambitieuze prijs. Daarna maak je in een paar tikken een verkoopklare advertentie met een nette foto en een eerlijke tekst.</p>
 <p>De waarde is een <b>schatting</b> op basis van vergelijkbare aanbiedingen. Het is geen taxatie en geen garantie op een verkoopprijs. De app doet geen echtheidscontrole van luxeartikelen.</p>
 </section>
-
 <section>
 <h2>Veelgestelde vragen</h2>
 <h3>De app herkent mijn voorwerp niet goed</h3>
@@ -96,15 +105,25 @@ footer .inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between
 <h3>Werkt de app in het buitenland?</h3>
 <p>De app werkt overal, maar de prijzen zijn gericht op de Nederlandse en Europese markt en worden in euro's getoond.</p>
 </section>
-
 <section>
 <h2>Een fout melden of iets voorstellen</h2>
 <p>Ontbreekt er iets, of klopt een waardering niet? Mail het met een schermafbeelding. Meldingen over duidelijk verkeerde herkenningen zijn het nuttigst: vermeld wat het werkelijk was.</p>
 </section>
-
 </div></main>
 <footer><div class="inner">
-<span>Velda B.V. · Auke Vleerstraat 155, 7547 PH Enschede · KvK 06061323 · btw NL008565417B01</span>
-<span><a href="mailto:elgar37@gmail.com">elgar37@gmail.com</a> · +31 6 20614144</span>
+<span>ValueLens Scan is een app van Elgar · Velda B.V. · Auke Vleerstraat 155, 7547 PH Enschede · KvK 06061323</span>
+<span><a href="privacy.html">Privacy</a> · <a href="voorwaarden.html">Voorwaarden</a> · <a href="mailto:elgar37@gmail.com">elgar37@gmail.com</a></span>
 </div></footer>
+<script>
+/* ====== NA GOEDKEURING DOOR APPLE: zet LIVE op true ====== */
+var LIVE = false;
+var APP_URL = "https://apps.apple.com/nl/app/id6813640334";
+document.querySelectorAll("[data-dl]").forEach(function(a){
+  if (LIVE) { a.href = APP_URL; a.setAttribute("rel","noopener"); }
+  else {
+    a.removeAttribute("href"); a.setAttribute("aria-disabled","true");
+    a.querySelector("small").textContent = "Binnenkort in de";
+  }
+});
+</script>
 </body></html>
