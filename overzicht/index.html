@@ -52,10 +52,10 @@
   </header>
 
   <div class="stats">
-    <div class="stat"><b>12</b>apps</div>
-    <div class="stat"><b>10</b>actief</div>
+    <div class="stat"><b>14</b>apps</div>
+    <div class="stat"><b>12</b>actief</div>
     <div class="stat"><b>2</b>in slaapstand</div>
-    <div class="stat"><b>11 GB</b>opslag (volumes)</div>
+    <div class="stat"><b>12 GB</b>opslag (volumes)</div>
   </div>
 
   <h2>Velda</h2>
@@ -99,6 +99,22 @@
       <p>De marketingsite voor PrijsRadar: "zie wie uw merk verkoopt, en tegen welke prijs". Staat in slaapstand en wordt automatisch wakker bij een bezoek (eerste keer laden duurt even).</p>
       <div class="meta">Publiek · 1 machine · geen volume</div>
       <div class="links"><a class="btn" href="https://prijsradar-site.fly.dev/">Openen</a><a class="btn sec" href="https://fly.io/apps/prijsradar-site">Fly-beheer</a></div>
+    </div>
+  </div>
+
+  <h2>Marktwerk (Maroy)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="top"><div><h3>Marktwerk-portaal</h3><div class="app">marktwerk-portal</div></div><span class="badge">Actief</span></div>
+      <p>Het klantportaal van Marktwerk, het platform dat Maroy aan merken en groothandels verkoopt. Beheer van klanten, bundels en modulevinkjes, gebruikers en rollen, verbruik, API-sleutels en support-sessies; modules als Prijsbewaking, Prospects en Velda Hub loggen hier straks via in. Testfase: inloggen met testcode, ZITADEL volgt.</p>
+      <div class="meta">Inlog vereist · 1 machine · Postgres (marktwerk-portal-db)</div>
+      <div class="links"><a class="btn" href="https://marktwerk-portal.fly.dev/beheer">Openen</a><a class="btn sec" href="https://fly.io/apps/marktwerk-portal">Fly-beheer</a></div>
+    </div>
+    <div class="card">
+      <div class="top"><div><h3>Marktwerk database</h3><div class="app">marktwerk-portal-db</div></div><span class="badge">Actief</span></div>
+      <p>De Postgres-database achter het Marktwerk-portaal: klanten, vinkjes, verbruik en logboek. Niet bedoeld om via de browser te openen; het portaal praat er intern mee over het private Fly-netwerk.</p>
+      <div class="meta">Alleen intern · 1 machine · 1 GB volume</div>
+      <div class="links"><a class="btn sec" href="https://fly.io/apps/marktwerk-portal-db">Fly-beheer</a></div>
     </div>
   </div>
 
